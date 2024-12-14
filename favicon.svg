@@ -1,3 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-    <path fill="#ff1493" d="M16 28.8c-.3 0-.5-.1-.7-.3L4.5 17.7c-2.8-2.8-2.8-7.3 0-10.1 1.4-1.4 3.2-2.1 5-2.1s3.7.7 5 2.1l1.5 1.5 1.5-1.5c1.4-1.4 3.2-2.1 5-2.1s3.7.7 5 2.1c2.8 2.8 2.8 7.3 0 10.1L16.7 28.5c-.2.2-.4.3-.7.3z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <defs>
+        <linearGradient id="treeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#2d5a27"/>
+            <stop offset="100%" style="stop-color:#3a7034"/>
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <path d="M256 20 L456 440 L56 440 Z" fill="url(#treeGradient)"/>
+    <rect x="216" y="440" width="80" height="60" fill="#4a2f20"/>
+    <circle cx="256" cy="80" r="20" fill="#ffd700" filter="url(#glow)"/>
+    <circle cx="200" cy="200" r="15" fill="#ff1493" filter="url(#glow)"/>
+    <circle cx="300" cy="250" r="15" fill="#ff69b4" filter="url(#glow)"/>
+    <circle cx="180" cy="300" r="15" fill="#ffd700" filter="url(#glow)"/>
+    <circle cx="280" cy="350" r="15" fill="#ff1493" filter="url(#glow)"/>
 </svg> 

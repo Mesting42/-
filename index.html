@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>元旦快乐</title>
+    <title>圣诞快乐</title>
     <link rel="icon" type="image/svg+xml" href="hellokitty.svg">
     <link rel="icon" type="image/png" href="hellokitty.png">
     <link rel="apple-touch-icon" sizes="180x180" href="hellokitty-180.png">
@@ -17,79 +17,79 @@
 <body>
     <div class="container">
         <h1 class="title">
-            <span class="char"></span>
+            <span class="char">宋</span>
             <span class="char">天</span>
             <span class="char">姿</span>
-            <span class="char">2</span>
-            <span class="char">0</span>
-            <span class="char">2</span>
-            <span class="char">5</span>
-            <span class="char">年</span>
-            <span class="char">元</span>
-            <span class="char">旦</span>
+            <span class="char">圣</span>
+            <span class="char">诞</span>
+            <span class="char">节</span>
             <span class="char">快</span>
             <span class="char">乐</span>
+            <span class="char">🎄</span>
         </h1>
         <div class="wishes">
             <p class="wish-item">
                 <span class="wish-char">愿</span>
-                <span class="wish-char">新</span>
+                <span class="wish-char">圣</span>
+                <span class="wish-char">诞</span>
                 <span class="wish-char">的</span>
-                <span class="wish-char">一</span>
-                <span class="wish-char">年</span>
-                <span class="wish-char">充</span>
-                <span class="wish-char">满</span>
-                <span class="wish-char">希</span>
-                <span class="wish-char">望</span>
-                <span class="wish-char">与</span>
-                <span class="wish-char">欢</span>
-                <span class="wish-char">笑</span>
-            </p>
-            <p class="wish-item">
-                <span class="wish-char">愿</span>
-                <span class="wish-char">你</span>
-                <span class="wish-char">的</span>
-                <span class="wish-char">生</span>
-                <span class="wish-char">活</span>
-                <span class="wish-char">幸</span>
+                <span class="wish-char">祝</span>
                 <span class="wish-char">福</span>
-                <span class="wish-char">美</span>
-                <span class="wish-char">满</span>
-                <span class="wish-char">，</span>
-                <span class="wish-char">事</span>
-                <span class="wish-char">业</span>
-                <span class="wish-char">腾</span>
-                <span class="wish-char">飞</span>
+                <span class="wish-char">带</span>
+                <span class="wish-char">给</span>
+                <span class="wish-char">你</span>
+                <span class="wish-char">温</span>
+                <span class="wish-char">暖</span>
             </p>
             <p class="wish-item">
                 <span class="wish-char">愿</span>
-                <span class="wish-char">所</span>
-                <span class="wish-char">有</span>
-                <span class="wish-char">美</span>
-                <span class="wish-char">好</span>
-                <span class="wish-char">都</span>
-                <span class="wish-char">与</span>
-                <span class="wish-char">你</span>
+                <span class="wish-char">平</span>
+                <span class="wish-char">安</span>
+                <span class="wish-char">喜</span>
+                <span class="wish-char">乐</span>
+                <span class="wish-char">永</span>
                 <span class="wish-char">相</span>
                 <span class="wish-char">伴</span>
                 <span class="wish-char">，</span>
-                <span class="wish-char">前</span>
-                <span class="wish-char">程</span>
-                <span class="wish-char">似</span>
-                <span class="wish-char">锦</span>
+                <span class="wish-char">幸</span>
+                <span class="wish-char">福</span>
+                <span class="wish-char">常</span>
+                <span class="wish-char">在</span>
             </p>
+            <p class="wish-item">
+                <span class="wish-char">愿</span>
+                <span class="wish-char">美</span>
+                <span class="wish-char">梦</span>
+                <span class="wish-char">成</span>
+                <span class="wish-char">真</span>
+                <span class="wish-char">，</span>
+                <span class="wish-char">心</span>
+                <span class="wish-char">想</span>
+                <span class="wish-char">事</span>
+                <span class="wish-char">成</span>
+                <span class="wish-char">🎅</span>
+            </p>
+        </div>
+        <div class="christmas-tree">
+            <div class="star">⭐</div>
+            <div class="tree"></div>
+            <div class="trunk"></div>
+            <div class="lights"></div>
+            <div class="decorations"></div>
         </div>
         <canvas id="fireworks"></canvas>
     </div>
     <script src="fireworks.js"></script>
     <script src="mouseTrail.js"></script>
     <script src="clickSound.js"></script>
+    <script src="bgMusic.js"></script>
     <script>
         window.onload = () => {
             const canvas = document.getElementById('fireworks');
             new Firework(canvas);
             new HeartTrail();
             new SoundEffect();
+            new BackgroundMusic();
         };
     </script>
 </body>

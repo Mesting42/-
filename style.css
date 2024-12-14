@@ -13,16 +13,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .title {
     color: #fff;
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 4rem);
     z-index: 1;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .char {
@@ -35,6 +42,8 @@ body {
         charFadeIn 0.5s ease-out forwards;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    white-space: nowrap;
+    margin: 0 1px;
 }
 
 /* 为每个字符添加更长的延迟，使效果更明显 */
@@ -106,17 +115,22 @@ body {
 .wishes {
     color: #fff;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     margin-top: 2rem;
     z-index: 1;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .wish-item {
-    margin: 25px 0;
+    margin: 25px auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5rem;
+    max-width: 90%;
+    padding: 0 10px;
 }
 
 .wish-char {
@@ -128,6 +142,8 @@ body {
     transition: transform 0.3s ease;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+    white-space: nowrap;
+    margin: 0 1px;
 }
 
 /* 第一行祝福语动画延迟 */
@@ -345,5 +361,47 @@ canvas {
 
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        gap: 0.3rem;
+    }
+
+    .wishes {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+        margin-top: 1.5rem;
+    }
+
+    .wish-item {
+        margin: 15px auto;
+        gap: 0.3rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title {
+        font-size: clamp(1.5rem, 3.5vw, 2rem);
+        gap: 0.2rem;
+    }
+
+    .wishes {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        margin-top: 1rem;
+    }
+
+    .wish-item {
+        margin: 10px auto;
+        gap: 0.2rem;
+    }
+
+    .container {
+        padding: 10px;
     }
 }

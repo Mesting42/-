@@ -33,6 +33,8 @@ body {
     animation:
         glow 2s ease-in-out infinite alternate,
         charFadeIn 0.5s ease-out forwards;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 /* 为每个字符添加更长的延迟，使效果更明显 */
@@ -97,6 +99,7 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
+        will-change: transform;
     }
 }
 
@@ -123,6 +126,8 @@ body {
     text-shadow: 0 0 5px #ffeb3b;
     animation: wishCharFadeIn 0.5s ease-out forwards;
     transition: transform 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 /* 第一行祝福语动画延迟 */
@@ -306,10 +311,12 @@ body {
         opacity: 1;
         transform: translateY(0) scale(1);
         text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffd700;
+        will-change: transform;
     }
 }
 
-.wish-char:hover {
+.wish-char:hover,
+.wish-char:active {
     transform: scale(1.2);
     text-shadow: 0 0 15px #ffeb3b, 0 0 25px #ffd700;
 }

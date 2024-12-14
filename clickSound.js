@@ -6,8 +6,20 @@ class SoundEffect {
         // 预加载点击音效
         this.loadClickSound();
 
-        // 添加点击事件监听
-        document.addEventListener('click', () => this.playClickSound());
+        // 添加点击和触摸事件监听
+        document.addEventListener('click', (e) => this.handleInteraction(e));
+        document.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // 阻止默认行为
+            this.handleInteraction(e);
+        }, { passive: false });
+    }
+
+    handleInteraction(e) {
+        // 忽略非文字区域的点击
+        const target = e.target;
+        if (target.classList.contains('char') || target.classList.contains('wish-char')) {
+            this.playClickSound();
+        }
     }
 
     async loadClickSound() {
@@ -34,7 +46,7 @@ class SoundEffect {
         const { gainNode } = this.clickSound;
         const now = this.audioContext.currentTime;
 
-        // 快速淡入淡���创造可爱的点击音效
+        // 快速淡入淡出创造可爱的点击音效
         gainNode.gain.cancelScheduledValues(now);
         gainNode.gain.setValueAtTime(0, now);
         gainNode.gain.linearRampToValueAtTime(0.3, now + 0.02);

@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #fff;
+    font-size: 4rem;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.char {
+    display: inline-block;
+    opacity: 0;
+    text-shadow: 0 0 10px #ff0000;
+    transform: translateY(-20px) scale(0.8);
+    animation:
+        glow 2s ease-in-out infinite alternate,
+        charFadeIn 0.5s ease-out forwards;
+}
+
+/* 为每个字符添加更长的延迟，使效果更明显 */
+.char:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.char:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.char:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.char:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.char:nth-child(5) {
+    animation-delay: 1.0s;
+}
+
+.char:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.char:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.char:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+.char:nth-child(9) {
+    animation-delay: 1.8s;
+}
+
+.char:nth-child(10) {
+    animation-delay: 2.0s;
+}
+
+.char:nth-child(11) {
+    animation-delay: 2.2s;
+}
+
+.char:nth-child(12) {
+    animation-delay: 2.4s;
+}
+
+@keyframes charFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.8);
+    }
+
+    50% {
+        transform: translateY(5px) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.wishes {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    z-index: 1;
+}
+
+.wish-item {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.wish-char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+    text-shadow: 0 0 5px #ffeb3b;
+    animation: wishCharFadeIn 0.5s ease-out forwards;
+}
+
+/* 第一行祝福语动画延迟 */
+.wish-item:nth-child(1) .wish-char:nth-child(1) {
+    animation-delay: 2.6s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(2) {
+    animation-delay: 2.7s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(3) {
+    animation-delay: 2.8s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(4) {
+    animation-delay: 2.9s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(5) {
+    animation-delay: 3.0s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(6) {
+    animation-delay: 3.1s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(7) {
+    animation-delay: 3.2s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(8) {
+    animation-delay: 3.3s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(9) {
+    animation-delay: 3.4s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(10) {
+    animation-delay: 3.5s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(11) {
+    animation-delay: 3.6s;
+}
+
+.wish-item:nth-child(1) .wish-char:nth-child(12) {
+    animation-delay: 3.7s;
+}
+
+/* 第二行祝福语动画延迟 */
+.wish-item:nth-child(2) .wish-char:nth-child(1) {
+    animation-delay: 3.9s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(2) {
+    animation-delay: 4.0s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(3) {
+    animation-delay: 4.1s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(4) {
+    animation-delay: 4.2s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(5) {
+    animation-delay: 4.3s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(6) {
+    animation-delay: 4.4s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(7) {
+    animation-delay: 4.5s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(8) {
+    animation-delay: 4.6s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(9) {
+    animation-delay: 4.7s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(10) {
+    animation-delay: 4.8s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(11) {
+    animation-delay: 4.9s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(12) {
+    animation-delay: 5.0s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(13) {
+    animation-delay: 5.1s;
+}
+
+.wish-item:nth-child(2) .wish-char:nth-child(14) {
+    animation-delay: 5.2s;
+}
+
+/* 第三行祝福语动画延迟 */
+.wish-item:nth-child(3) .wish-char:nth-child(1) {
+    animation-delay: 5.4s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(2) {
+    animation-delay: 5.5s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(3) {
+    animation-delay: 5.6s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(4) {
+    animation-delay: 5.7s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(5) {
+    animation-delay: 5.8s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(6) {
+    animation-delay: 5.9s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(7) {
+    animation-delay: 6.0s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(8) {
+    animation-delay: 6.1s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(9) {
+    animation-delay: 6.2s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(10) {
+    animation-delay: 6.3s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(11) {
+    animation-delay: 6.4s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(12) {
+    animation-delay: 6.5s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(13) {
+    animation-delay: 6.6s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(14) {
+    animation-delay: 6.7s;
+}
+
+.wish-item:nth-child(3) .wish-char:nth-child(15) {
+    animation-delay: 6.8s;
+}
+
+@keyframes wishCharFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8);
+    }
+
+    50% {
+        transform: translateY(-5px) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffd700;
+    }
+}
+
+.wish-char:hover {
+    animation: charPop 0.3s ease-in-out forwards;
+}
+
+@keyframes charPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff0000;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ff0000, 0 0 30px #ff4444;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

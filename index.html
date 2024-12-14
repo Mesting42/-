@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元旦快乐</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">
+            <span class="char">宋</span>
+            <span class="char">天</span>
+            <span class="char">姿</span>
+            <span class="char">2</span>
+            <span class="char">0</span>
+            <span class="char">2</span>
+            <span class="char">5</span>
+            <span class="char">年</span>
+            <span class="char">元</span>
+            <span class="char">旦</span>
+            <span class="char">快</span>
+            <span class="char">乐</span>
+        </h1>
+        <div class="wishes">
+            <p class="wish-item">
+                <span class="wish-char">愿</span>
+                <span class="wish-char">新</span>
+                <span class="wish-char">的</span>
+                <span class="wish-char">一</span>
+                <span class="wish-char">年</span>
+                <span class="wish-char">充</span>
+                <span class="wish-char">满</span>
+                <span class="wish-char">希</span>
+                <span class="wish-char">望</span>
+                <span class="wish-char">与</span>
+                <span class="wish-char">欢</span>
+                <span class="wish-char">笑</span>
+            </p>
+            <p class="wish-item">
+                <span class="wish-char">愿</span>
+                <span class="wish-char">你</span>
+                <span class="wish-char">的</span>
+                <span class="wish-char">生</span>
+                <span class="wish-char">活</span>
+                <span class="wish-char">幸</span>
+                <span class="wish-char">福</span>
+                <span class="wish-char">美</span>
+                <span class="wish-char">满</span>
+                <span class="wish-char">，</span>
+                <span class="wish-char">事</span>
+                <span class="wish-char">业</span>
+                <span class="wish-char">腾</span>
+                <span class="wish-char">飞</span>
+            </p>
+            <p class="wish-item">
+                <span class="wish-char">愿</span>
+                <span class="wish-char">所</span>
+                <span class="wish-char">有</span>
+                <span class="wish-char">美</span>
+                <span class="wish-char">好</span>
+                <span class="wish-char">都</span>
+                <span class="wish-char">与</span>
+                <span class="wish-char">你</span>
+                <span class="wish-char">相</span>
+                <span class="wish-char">伴</span>
+                <span class="wish-char">，</span>
+                <span class="wish-char">前</span>
+                <span class="wish-char">程</span>
+                <span class="wish-char">似</span>
+                <span class="wish-char">锦</span>
+            </p>
+        </div>
+        <canvas id="fireworks"></canvas>
+    </div>
+    <script src="fireworks.js"></script>
+    <script src="mouseTrail.js"></script>
+    <script>
+        window.onload = () => {
+            const canvas = document.getElementById('fireworks');
+            new Firework(canvas);
+            new HeartTrail();
+        };
+    </script>
+</body>
+
+</html>
